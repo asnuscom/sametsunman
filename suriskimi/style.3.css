@@ -1,0 +1,396 @@
+/*
+Theme Name: Sophie
+Theme URI: 
+Description: 
+Author: Jonah Goldstein
+Version: 1.0
+Tags: 
+*/
+
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+
+
+
+/*////////////////////////////////////*/
+/*////////////////////////////////////*/
+/*////////////////////////////////////*/
+/*////////////////////////////////////*/
+
+
+
+
+
+
+@font-face {
+	font-family: 'IM Fell Great Primer';
+	src: url('fonts/fegprm27c-webfont.eot');
+	src: local('â˜º'), url('fonts/fegprm27c-webfont.woff') format('woff'), url('fonts/fegprm27c-webfont.ttf') format('truetype'), url('fonts/fegprm27c-webfont.svg#webfontEgg609ff') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+a {
+	color: #256e94;
+	text-decoration: none;
+	outline: none;
+}
+
+
+
+html, body {
+	background: url(imgs/back.jpg) 0px 0px repeat;
+	font-family: 'IM Fell Great Primer', sans-serif;
+	font-size: 18px;
+	color: #454336;
+	height: 100%;
+}
+
+#wrapper {
+	height: 100%;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+
+
+
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;	left: 0;
+	z-index: 30;
+	-webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+     -o-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+     overflow: hidden;
+}
+
+
+#offset_wrapper {
+	position: relative;
+	top: 0;	left: 0;
+	z-index: 30;
+}	
+
+
+	
+
+
+.hidden{
+	display: none;
+}
+
+
+
+h2 {
+	text-align: center;
+	font: italic 40px Georgia, "Times New Roman", Times, serif;
+	width: 80%;
+	max-width: 400px;
+	display: none;
+	margin: 100px auto;
+	text-shadow: #DBAA80 0 1px 0;
+}
+h2#first {
+	display: block;
+}
+
+
+.bottle {
+	position: absolute;
+	-webkit-transition: -webkit-transform 1.2s ease-in-out;
+	-ms-transition: -ms-transform 1.2s ease-in-out;
+	-moz-transition: -moz-transform 1.2s ease-in-out;
+	-o-transition: -o-transform 1.2s ease-in-out;
+	transition: transform 1.2s ease-in-out;	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#bottle-1 {
+	top: -400px;
+	left: -240px;
+	cursor: pointer;	
+}
+
+.drop {
+	background: url(imgs/sprites.1.png) 0 0 no-repeat;
+	width: 41px;
+	height: 57px;
+	position: absolute;
+	-webkit-transition: -webkit-transform .7s;
+	-ms-transition: -ms-transform .7s;
+	-moz-transition: -moz-transform .7s;
+	-o-transition: -o-transform .7s;
+	transition: transform .7s;	
+	z-index: 2000;
+}
+
+.msg {
+	color: #5e4b45;
+	background: url(imgs/msg.jpg);
+	display: none;
+	font: italic 28px Georgia, "Times New Roman", Times, serif;
+	width: 300px;
+	position: absolute;
+	text-align: center;
+	padding: 20px 0;
+	-webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .2);
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .2);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 20;
+}
+	.msg p {
+		padding: 5px 20px;
+	}
+	.msg a {
+		color: #4f7589;
+		padding: 0 5px;
+		border-bottom: 1px dotted #4f7589;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-transition: all .2s;
+		-ms-transition: all .2s;
+		-moz-transition: all .2s;
+		-o-transition: all .2s;
+		transition: all .2s;
+	}
+	.msg a:hover {
+		color: #fff;
+		background: #4f7589;
+	}
+
+
+.bird {
+	width: 78px;
+	height: 115px;
+	background: url(imgs/sprites.1.png) 0 -63px no-repeat;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+.flap {
+	width: 78px;
+	height: 115px;
+	background-position: 0 -186px;
+	position: absolute;
+}
+.dead {
+	width: 78px;
+	height: 115px;
+	background-position: 0 -303px;
+	position: absolute;
+}
+.points_msg {
+	font: italic 40px Georgia, "Times New Roman", Times, serif;
+	color: #dde5ff;
+	font-weight: bold;
+	position: absolute;
+	top:0;	left:0;
+	text-shadow: 0 2px 2px #454336;
+}
+
+
+#underwater {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: url(imgs/underwater.jpg);
+	z-index: 1500;
+}
+#underwater h3 {
+	color: #d8e9f2;
+	font: italic 28px Georgia, "Times New Roman", Times, serif;
+	width: 250px;
+	line-height: 1.25em;
+	margin: 25px auto;
+}
+#underwater h3 a {
+	color: #f6bf4f;
+}
+	#underwater h3 a:hover {
+		text-decoration: underline;
+	}
+#underwater cite {
+	font-size: 65%;
+	display: block;
+	line-height: 1.1em;
+}
+	#underwater cite a {
+		color: #85A4B7;
+	}
+	#underwater cite a:hover {
+		text-decoration: underline;
+	}	
+	#underwater .content {
+		padding-top: 50px;
+	}
+
+
+
+.social_buttons a, .social_buttons iframe {
+	z-index: 2500;
+	position: fixed;
+	display: block;
+}
+.twitter-share-button {
+	right: 19px;	
+	bottom: 24px;
+}
+.facebook_btn {
+	background: url(imgs/share_facebook.png) no-repeat;
+	width: 65px;
+	height: 26px;
+	right: 90px;	
+	bottom: 20px;
+}
+
+
+
+
+#waves_1 {
+	width: 100%;
+	height: 222px;
+	background: url(imgs/wave1.png) repeat-x;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 40; /*7;*/
+}
+
+#waves_2 {
+	width: 100%;
+	height: 272px;
+	background: url(imgs/wave2.png) repeat-x;
+	position: absolute;
+	bottom: 0px;
+	z-index: 5;
+	left: 0;
+}
+
+
+
+/* jQuery Countdown styles 1.5.9. */
+
+#countdown {
+	font-family: Georgia, Times, serif;
+	max-width: 300px;
+	margin: 20px auto;
+}
+.hasCountdown {
+}
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_holding span {
+}
+.countdown_row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.countdown_show1 .countdown_section {
+	width: 98%;
+}
+.countdown_show2 .countdown_section {
+	width: 48%;
+}
+.countdown_show3 .countdown_section {
+	width: 32.5%;
+}
+.countdown_show4 .countdown_section {
+	width: 24.5%;
+}
+.countdown_show5 .countdown_section {
+	width: 19.5%;
+}
+.countdown_show6 .countdown_section {
+	width: 16.25%;
+}
+.countdown_show7 .countdown_section {
+	width: 14%;
+}
+.countdown_section {
+	display: block;
+	float: left;
+	font-size: 75%;
+	text-align: center;
+}
+.countdown_amount {
+	font-size: 200%;
+	color: ;
+}
+.countdown_descr {
+	display: block;
+	width: 100%;
+}
