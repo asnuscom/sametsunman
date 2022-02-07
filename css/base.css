@@ -167,7 +167,6 @@ iframe{
 	
 	.block-background-image {
 	    backface-visibility: hidden;
-		background-attachment: fixed;
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	    background-size: cover;
@@ -180,7 +179,7 @@ iframe{
 
 
 	.block-background-image.large{
-			padding: 200px 0;
+			padding: 125px 0;
 	}
 	
 	
