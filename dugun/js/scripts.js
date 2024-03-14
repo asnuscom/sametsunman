@@ -5,6 +5,23 @@ $(document).ready(function() {
         date: '07/15/2024 13:00:00',
         offset: +10
   });
+
+
+    $("#gift").on('click', function () {
+        $(".custom-model-main").addClass('model-open');
+        $(".content-gift").addClass('show');
+    });
+    $("#donate").on('click', function () {
+        $(".custom-model-main").addClass('model-open');
+        $(".content-donate").addClass('show');
+    });
+    $(".close-btn, .bg-overlay").click(function () {
+        $(".custom-model-main").removeClass('model-open');
+        $(".content-gift").removeClass('show');
+        $(".content-donate").removeClass('show');
+    });
+
+
   // Scroll to ID  
   function scrollToId(str) {
         $(str + '[href*="#"]').on('click', function(e) {
@@ -206,7 +223,7 @@ $(document).ready(function() {
 
             //Ceremony address map
             ceremonyMap = new ymaps.Map('address__map--ceremony', {
-                    center: [40.760873, -73.976398],
+                    center: [41.022063, 28.6876616],
                     zoom: 17,
                     controls: []
                 }, {
@@ -236,7 +253,7 @@ $(document).ready(function() {
 
             //Reception address map
             receptionMap = new ymaps.Map('address__map--reception', {
-                    center: [40.760873, -73.976398],
+                    center: [41.1075556, 28.8716217],
                     zoom: 17,
                     controls: []
                 }, {
