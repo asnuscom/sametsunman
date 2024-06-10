@@ -1297,7 +1297,7 @@ ul.color_schemes li {
   height: 500px;
   position: relative;
   padding-top: 4px;
-  padding-bottom: 120px;
+  padding-bottom: 50px;
 }
 .photos .swiper-container {
   overflow: visible;
@@ -1308,6 +1308,21 @@ ul.color_schemes li {
 
 .photo img {
   width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  .photos {
+    height: unset;
+  }
+
+  .photo img {
+    margin: 20px;
+    width: 90%;
+  }
+
+  .photos .s-title {
+    margin-bottom: 64px;
+  }
 }
 
 .swiper-slide {
@@ -1609,6 +1624,7 @@ ul.color_schemes li {
   line-height: 20px;
   color: #fff;
   background-color: #4f3566;
+  padding: 10px;
 }
 
 .venues__card {
