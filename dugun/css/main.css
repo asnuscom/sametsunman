@@ -877,6 +877,7 @@ ul.color_schemes li {
 
 .couple__text {
   max-width: 384px;
+  align-content: center;
 }
 
 .couple__text--right {
@@ -897,7 +898,7 @@ ul.color_schemes li {
 }
 
 .couple__groom {
-  margin-bottom: 62px;
+  margin: 0px 62px 62px;
 }
 
 .couple__bride {
@@ -924,8 +925,8 @@ ul.color_schemes li {
 }
 
 .couple__image {
-  width: 300px;
-  height: 380px;
+  width: 448px;
+  height: 338px;
   border: 8px solid #4f3566;
   position: relative;
 }
@@ -939,8 +940,8 @@ ul.color_schemes li {
 .couple__image-groom--left::after {
   top: -40px;
   left: 40px;
-  background-size: cover;
-  background-image: url("../images/groom.jpg");
+  background-size: contain;
+  background-image: url("../images/4.JPG");
 }
 
 .couple__image-bride--right::after {

@@ -3,7 +3,7 @@ $(document).ready(function () {
     //Coundown
     $('.countdown').downCount({
         date: '07/15/2024 13:00:00',
-        offset: +10
+        offset: +3
     });
 
 
