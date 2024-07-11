@@ -219,12 +219,12 @@ $(document).ready(function () {
         function init() {
 
             //Switch map icon
-            let defaultIcon = 'img/map/icon--' + $('head link[id="skins"]').attr('data-color') + '.svg';
+            let defaultIcon = 'images/location.svg';
             console.log(defaultIcon);
 
             //Ceremony address map
             ceremonyMap = new ymaps.Map('address__map--ceremony', {
-                center: [41.022063, 28.6876616],
+                center: [41.021934, 28.687977],
                 zoom: 17,
                 controls: []
             }, {
@@ -253,7 +253,7 @@ $(document).ready(function () {
 
             //Invite address map
             inviteMap = new ymaps.Map('address__map--invite', {
-                center: [41.019967, 28.704413],
+                center: [41.019982, 28.704255],
                 zoom: 17,
                 controls: []
             }, {
@@ -283,7 +283,7 @@ $(document).ready(function () {
 
             //Reception address map
             receptionMap = new ymaps.Map('address__map--reception', {
-                center: [41.1075556, 28.8716217],
+                center: [41.105826, 28.876033],
                 zoom: 17,
                 controls: []
             }, {
@@ -291,7 +291,7 @@ $(document).ready(function () {
             });
 
             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                '<div style="color: #FFFFFF; font-weight: bold;">AAAA</div>'
             ),
 
                 myPlacemark = new ymaps.Placemark(receptionMap.getCenter(), {
